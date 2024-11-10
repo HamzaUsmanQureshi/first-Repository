@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Application Form</h1>
+    <form>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+        <br />
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+        <br />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        <br />
+
+        <label for="qualification">Highest Qualification:</label>
+        <input type="text" id="qualification" name="qualification" placeholder="Enter your highest qualification">
+        <br />
+
+        <label for="institution">Name of Last Institution Attended:</label>
+        <input type="text" id="institution" name="institution" placeholder="Enter the name of your last institution">
+        <br />
+
+        <label for="graduation">Year of Graduation:</label>
+        <input type="number" id="graduation" name="graduation" placeholder="Enter your year of graduation">
+        <br />
+
+        <label for="program">Desired Program:</label>
+        <select id="program" name="program">
+            <option value="program1">Program 1</option>
+            <option value="program2">Program 2</option>
+            <option value="program3">Program 3</option>
+        </select>
+        <br />
+
+        <label>Additional Courses/Workshops:</label>
+        <input type="checkbox" id="course1" name="course1" value="Course 1">
+        <label for="course1">Course 1</label>
+        <input type="checkbox" id="course2" name="course2" value="Course 2">
+        <label for="course2">Course 2</label>
+        <input type="checkbox" id="course3" name="course3" value="Course 3">
+        <label for="course3">Course 3</label>
+        <br />
+
+        <label for="address">Permanent Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your permanent address"></textarea>
+        <br />
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city">
+        <br />
+
+        <label for="postalcode">Postal Code:</label>
+        <input type="text" id="postalcode" name="postalcode" placeholder="Enter your postal code">
+        <br />
+
+        <button type="submit">Submit</button>
+
+        <p id="confirmation"></p>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const confirmationMessage = document.getElementById('confirmation');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            confirmationMessage.textContent = 'Your application has been submitted successfully!';
+        });
+    </script>
+</body>
+</html>
